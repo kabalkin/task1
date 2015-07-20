@@ -1,0 +1,59 @@
+* {
+    font-family: cursive;
+}
+
+#canvas-wrap {
+ position:relative
+ }
+#overlay     {
+
+ position:absolute; top:20px; left:30px;
+ padding: 5px;
+ background-color: rgba(255,255,255,0.5);
+ border: 2px inset white;
+
+ padding: 10px;
+
+
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    display: block;
+}
+
+input {
+    clear: both;
+    float: right;
+    padding: 5px;
+}
+
+label {
+    float: left;
+
+}
+
+output {
+    float: left;
+}
+
+h2 {
+    padding: 5px;
+}
+
+a {
+    padding: 2px;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+
+    border-radius: 5px;
+    background: rgba(255,255,255,0.5);
+   padding: 2px;
+}

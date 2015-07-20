@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="style.css"/>
+    <script type="text/javascript" src="script.js"></script>
+    <title></title>
+</head>
+<body onload="main()">
+<!--<audio src="12.mp3" autoplay></audio>-->
+    <div id="canvas-wrap"><canvas id ="test"></canvas>
+
+
+
+
+    <div id="overlay">
+    <div style="clear:both; text-align:center">
+    <a onclick="javascript:document.getElementById('subMenuTip0').style.display='block'" ondblclick="javascript:document.getElementById('subMenuTip0').style.display='none'" href="javascript:void(0)">Options</a>
+    </div>
+
+    <div id="subMenuTip0" style="display:none; text-align:left; padding:10px">
+
+    <div >
+
+        <label for=speed>Speed: </label>
+        <output for=speed id= "speedOut">33</output>
+        <input type=range min=5 max=1000 value=33 id=speed step=1 onchange="outputUpdate(value);">
+
+    </div>
+
+    <div >
+        <label for=sizeFnt>Font-size: </label>
+        <output for=sizeFnt id= "sizeFntOut">8</output>
+        <input type=range min=5 max=40 value=8 id=sizeFnt step=1 onchange="outputUpdateFnt(value);">
+
+    </div>
+    <div >
+        <label for=attenuation>Attenuation: </label>
+        <output for=sizeFnt id= "attenuationOut">0.05</output>
+        <input type=range min=0.01 max=1 value=0.05 id=attenuation step=0.01 onchange="outputUpdateAt(value);">
+
+    </div>
+    <div style="clear:both; text-align:center">
+        <a onclick="javascript:document.getElementById('subMenuTip0').style.display='none'" href="javascript:void(0)">Close</a>
+    </div>
+
+</div>
+    </div>
+    </div>
+    <script>
+    </script>
+</body>
+</html>
