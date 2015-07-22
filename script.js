@@ -1,6 +1,18 @@
-﻿var timer;
+var timer;
+
+
+
 main = function()
 {
+var audio = document.getElementById('background_audio');
+document.getElementById('mute').addEventListener('click', function (e)
+{
+    e = e || window.event;
+    audio.muted = !audio.muted;
+    e.preventDefault();
+}, false);
+
+
         speed = document.getElementById("speed").value;
         var c = document.getElementById("test");
         var ctx = c.getContext("2d");
@@ -33,10 +45,24 @@ main = function()
          if(text===" " && Math.random()>0.50)
             drops[i] = drops[i]+10;
         if(drops[i]*font_size > c.height && Math.random() > 0.975)
-            drops[i] = 0;
-        drops[i]++;
+            {
+                drops[i] = 0;
+
+                if (Math.random()>=0.98) {
+                font_size++;
+                fnt=font_size+"px cursive";
+                columns = c.width/font_size;
+            }
+
+
+            }
+
+       drops[i]++;
 
     };
+
+
+
 
     };
 
@@ -48,17 +74,19 @@ stopRain = function(){
     main();
 };
 
-function outputUpdate(vol) {
+outputUpdate=function(vol) {
   document.querySelector('#speedOut').value = vol;
   stopRain();
 };
 
-function outputUpdateFnt(vol) {
+outputUpdateFnt=function(vol) {
   document.querySelector('#sizeFntOut').value = vol;
   stopRain();
 };
 
-function outputUpdateAt(vol) {
+outputUpdateAt=function(vol) {
   document.querySelector('#attenuationOut').value = vol;
   stopRain();
 };
+
+
